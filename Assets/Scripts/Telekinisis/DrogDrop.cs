@@ -41,6 +41,7 @@ public class DragDrop : MonoBehaviour
     private void OnMouseDown()
     {
         _mousePosition = Input.mousePosition - GetObjectScreenPos();
+       
     }
 
     private void OnMouseUp()
