@@ -24,6 +24,7 @@ public class Pausebuttons : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("MainGame");
+        Debug.Log("restarted");
     }
 
     

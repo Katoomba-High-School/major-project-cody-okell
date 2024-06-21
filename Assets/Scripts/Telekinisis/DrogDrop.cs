@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,12 +27,17 @@ public class DragDrop : MonoBehaviour
     {
         Rigidbody = GetComponent<Rigidbody>();
         slider = GetComponent<Slider>();
-
-
     }
-    
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision != null)
+        {
+            
+        }
+     
+        Debug.Log("collision");
+    }
 
     public Vector3 GetObjectScreenPos() 
     {

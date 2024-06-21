@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 827286166}
   - component: {fileID: 827286167}
   m_Layer: 5
-  m_Name: SliderT
+  m_Name: Tele Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1276,7 +1276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 71}
+  m_AnchoredPosition: {x: 0, y: 67}
   m_SizeDelta: {x: 523.7701, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693932483
@@ -1616,7 +1616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000025034, y: 225}
+  m_AnchoredPosition: {x: 0.000025034, y: 221}
   m_SizeDelta: {x: 132.2329, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928059405
