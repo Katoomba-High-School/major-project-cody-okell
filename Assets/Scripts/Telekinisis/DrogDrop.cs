@@ -54,6 +54,7 @@ public class DragDrop : MonoBehaviour
     {
        Rigidbody.velocity = Vector3.zero;
         Debug.Log($"{Rigidbody.velocity}");
+        
     }
 
     private void OnMouseDrag()
