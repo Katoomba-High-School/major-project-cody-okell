@@ -14,15 +14,15 @@ public class DragDrop : MonoBehaviour
     /// Speed in which the object moves forwards and backwards.
     /// </summary>
     public float scrollSpeed = 0.2f;
+    public Transform cylinder;
 
     private Vector3 _mousePosition;
     private Vector3 _offset;
 
-    public DragDrop()
+    /*void update()
     {
 
-    }
-
+    }*/
     private void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
