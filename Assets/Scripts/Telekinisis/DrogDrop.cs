@@ -15,55 +15,29 @@ public class DragDrop : MonoBehaviour
     /// </summary>
     public float scrollSpeed = 0.2f;
     public Transform cylinder;
-
+    public Camera cam;
     private Vector3 _mousePosition;
     private Vector3 _offset;
-
-    /*void update()
+    public float distanceFromCamera;
+    private Transform Cylinder;
+    void Start()
     {
+        distanceFromCamera = Vector3.Distance (cylinder.position, cam.transform.position);
+        Rigidbody = cam.GetComponent<Rigidbody> ();
 
-    }*/
-    private void Start()
-    {
-        Rigidbody = GetComponent<Rigidbody>();
-        slider = GetComponent<Slider>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    Vector3 lastPos;
+    void Update ()
     {
-        if (collision != null)
+        if (Input.GetMouseButton(0))
         {
-            
+            Vector3 pos = Input.mousePosition;
+            pos.z = distanceFromCamera;
+            pos = cam.ScreenToWorldPoint (pos);
+            Rigidbody.velocity = (pos - cylinder.position) * 10;
         }
-     
-        Debug.Log("collision");
-    }
 
-    public Vector3 GetObjectScreenPos() 
-    {
-        return Camera.main.WorldToScreenPoint(transform.position);
-    }
-
-    private void OnMouseDown()
-    {
-        _mousePosition = Input.mousePosition - GetObjectScreenPos();
-       
-    }
-
-    private void OnMouseUp()
-    {
-       Rigidbody.velocity = Vector3.zero;
-        Debug.Log($"{Rigidbody.velocity}");
-        
-    }
-
-    private void OnMouseDrag()
-    {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - (_mousePosition + _offset));
-    }
-
-    void Update()
-    {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
             // minimap.orthographicSize++;
@@ -75,6 +49,60 @@ public class DragDrop : MonoBehaviour
             _offset += new Vector3(0, 0, -scrollSpeed);
         }
     }
+    /*
+     private void Start()
+     {
+         Rigidbody = GetComponent<Rigidbody>();
+         slider = GetComponent<Slider>();
+     }
+
+     private void OnCollisionEnter(Collision collision)
+     {
+         if (collision != null)
+         {
+
+         }
+         Debug.Log("collision");
+     }
+
+     public Vector3 GetObjectScreenPos() 
+     {
+         return Camera.main.WorldToScreenPoint(transform.position);
+     }
+
+     private void OnMouseDown()
+     {
+         _mousePosition = Input.mousePosition - GetObjectScreenPos();
+
+     }
+
+     private void OnMouseUp()
+     {
+        Rigidbody.velocity = Vector3.zero;
+         Debug.Log($"{Rigidbody.velocity}");
+
+     }
+
+     private void OnMouseDrag()
+     {
+         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - (_mousePosition + _offset));
+     }*/
+
+ /* void Update()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            // minimap.orthographicSize++;
+            _offset += new Vector3(0, 0, scrollSpeed);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            // minimap.orthographicSize--;
+            _offset += new Vector3(0, 0, -scrollSpeed);
+        }
+
+        
+    }*/
 
 
 

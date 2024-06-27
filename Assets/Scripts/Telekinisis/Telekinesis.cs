@@ -14,7 +14,8 @@ public class Telekinesis : MonoBehaviour
     public float rotation;
     private Vector3 mousePos;
     public float velocity;
-
+    
+    
     private bool IsTelekinesis = false;
     //private GameObject Target = null;
 
