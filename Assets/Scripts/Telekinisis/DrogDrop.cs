@@ -15,40 +15,11 @@ public class DragDrop : MonoBehaviour
     /// </summary>
     public float scrollSpeed = 0.2f;
     public Transform cylinder;
-    public Camera cam;
     private Vector3 _mousePosition;
     private Vector3 _offset;
     public float distanceFromCamera;
     private Transform Cylinder;
-    /*void Start()
-    {
-        distanceFromCamera = Vector3.Distance (cylinder.position, cam.transform.position);
-        Rigidbody = cam.GetComponent<Rigidbody> ();
-
-    }
-
-    Vector3 lastPos;
-    void Update ()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 pos = Input.mousePosition;
-            pos.z = distanceFromCamera;
-            pos = cam.ScreenToWorldPoint (pos);
-            Rigidbody.velocity = (pos - cylinder.position) * 10;
-        }
-
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
-        {
-            // minimap.orthographicSize++;
-            _offset += new Vector3(0, 0, scrollSpeed);
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
-        {
-            // minimap.orthographicSize--;
-            _offset += new Vector3(0, 0, -scrollSpeed);
-        }
-    }*/
+    
     
      private void Start()
      {
