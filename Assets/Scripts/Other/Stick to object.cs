@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Selectable")
         {
-            rb.isKinematic = false;
+            rb.isKinematic = true;
 
             GameTrigger.Trigger(this.gameObject, new TriggerEventArgs("Enter"));
         }
@@ -22,6 +22,12 @@ public class NewBehaviourScript : MonoBehaviour
         if (collision.gameObject.tag == "Selectable")
         {
             GameTrigger.Trigger(this.gameObject, new TriggerEventArgs("Leave"));
+            rb.isKinematic = false;
         }
     }
+
+
+
+
+
 }
