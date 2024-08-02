@@ -1811,6 +1811,7 @@ GameObject:
   - component: {fileID: 385578848}
   - component: {fileID: 385578847}
   - component: {fileID: 385578846}
+  - component: {fileID: 385578849}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1904,6 +1905,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385578844}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &385578849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385578844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44837354f721564ba759324d1fa4391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  offset: {x: 0, y: 0, z: 0}
+  seconds: 2
 --- !u!1 &396801804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +2485,7 @@ Transform:
   m_GameObject: {fileID: 438039056}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2078.4346, y: 740.7308, z: 348.6365}
+  m_LocalPosition: {x: 2078.4346, y: 740.7308, z: 349}
   m_LocalScale: {x: 0.5536932, y: 27.778757, z: 37.46377}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2465,7 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameTrigger: {fileID: 488517571}
-  offset: {x: 0, y: -30, z: 0}
+  offset: {x: 0, y: 0, z: -30}
   seconds: 5
 --- !u!1 &449527596
 GameObject:
@@ -3323,7 +3362,7 @@ Transform:
   m_GameObject: {fileID: 589682209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1782, y: -725.4, z: -107.3}
+  m_LocalPosition: {x: -1738.8, y: -730.8, z: -305.5}
   m_LocalScale: {x: 0.76340157, y: 1, z: 0.68209875}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7989,7 +8028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aea7b82330088ff4596b646aaa4f359a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.496
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aea7b82330088ff4596b646aaa4f359a, type: 3}
       propertyPath: m_LocalPosition.z
