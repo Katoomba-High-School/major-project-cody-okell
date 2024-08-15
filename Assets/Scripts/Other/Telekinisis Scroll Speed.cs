@@ -9,8 +9,6 @@ using UnityEngine.UIElements;
 public class Change : MonoBehaviour
 {
 
-    [SerializeField] ScriptReference DragDrop;
-
 
     public void ChangeSliderValue()
     { 

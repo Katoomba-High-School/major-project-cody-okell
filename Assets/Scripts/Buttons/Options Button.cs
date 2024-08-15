@@ -11,9 +11,5 @@ public class OptionsButton : MonoBehaviour
         SceneManager.LoadScene("Options");
     }
 
-    public void GoToOptions2()
-    {
-        SceneManager.LoadScene("options2");
-        
-    }
+    
 }
